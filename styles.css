@@ -1,0 +1,285 @@
+:root {
+    --color-negro: #000000;
+    --color-amarillo: #FFD700;
+    --color-amarillo-claro: #FFE44D;
+    --color-gris: #333333;
+    --color-blanco: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+}
+
+/* Header y Navegación */
+header {
+    background-color: var(--color-negro);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(255, 215, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: var(--color-amarillo);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-amarillo);
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: var(--color-amarillo);
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: var(--color-amarillo);
+    color: var(--color-negro);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--color-amarillo-claro);
+    transform: scale(1.05);
+}
+
+/* Secciones Generales */
+section {
+    padding: 5rem 2rem;
+}
+
+section h2 {
+    text-align: center;
+    color: var(--color-amarillo);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.planes-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.card-planes {
+    background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+    border-radius: 15px;
+    padding: 2rem;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-planes:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 215, 0, 0.1);
+}
+
+.card-planes.destacado {
+    border: 2px solid var(--color-amarillo);
+    transform: scale(1.05);
+}
+
+.card-planes.destacado:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.card-header {
+    text-align: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-header h3 {
+    color: var(--color-amarillo);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.precio {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-blanco);
+}
+
+.periodo {
+    color: var(--color-amarillo);
+    font-size: 1rem;
+}
+
+.card-body {
+    flex-grow: 1;
+}
+
+.card-body ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card-body li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-blanco);
+}
+
+.card-body i {
+    color: var(--color-amarillo);
+}
+
+.plan-button {
+    background-color: var(--color-amarillo);
+    color: var(--color-negro);
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.plan-button:hover {
+    background-color: var(--color-amarillo-claro);
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-gris);
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: var(--color-amarillo);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--color-amarillo-claro);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .planes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-planes {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .card-planes.destacado {
+        transform: scale(1);
+    }
+
+    .card-planes.destacado:hover {
+        transform: translateY(-10px);
+    }
+} 
