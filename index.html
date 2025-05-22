@@ -1,125 +1,192 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PowerFit Gym - Tu mejor versión comienza aquí</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="logo">PowerFit</div>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#planes">Planes</a></li>
-                <li><a href="#clases">Clases</a></li>
-                <li><a href="#entrenadores">Entrenadores</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <div class="logo">PowerFit</div>
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#planes">Planes</a></li>
+          <li><a href="#clases">Clases</a></li>
+          <li><a href="#entrenadores">Entrenadores</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <section id="hero">
-            <div class="hero-content">
-                <h1>TRANSFORMA TU VIDA</h1>
-                <p>Únete a la mejor experiencia fitness de la ciudad</p>
-                <button class="cta-button">¡Comienza Ahora!</button>
+      <section id="hero">
+        <div class="hero-content">
+          <h1>TRANSFORMA TU VIDA</h1>
+          <p>Únete a la mejor experiencia fitness de la ciudad</p>
+          <button class="cta-button">¡Comienza Ahora!</button>
+        </div>
+      </section>
+
+      <section id="planes">
+        <h2>Nuestros Planes</h2>
+        <div class="planes-container">
+          <div class="card-planes">
+            <div class="card-header">
+              <h3>Plan CrossFit</h3>
+              <span class="precio">$30.000</span>
+              <span class="periodo">/mes</span>
             </div>
-        </section>
-
-        <section id="planes">
-            <h2>Nuestros Planes</h2>
-            <div class="planes-container">
-                <div class="card-planes">
-                    <div class="card-header">
-                        <h3>Plan CrossFit</h3>
-                        <span class="precio">$30.000</span>
-                        <span class="periodo">/mes</span>
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><i class="fas fa-check"></i> Clases ilimitadas</li>
-                            <li><i class="fas fa-check"></i> Entrenador especializado</li>
-                            <li><i class="fas fa-check"></i> Plan nutricional avanzado</li>
-                            <li><i class="fas fa-check"></i> Acceso a zona WOD</li>
-                        </ul>
-                    </div>
-                    <button class="plan-button">¡Comenzar Ahora!</button>
-                </div>
-
-                <div class="card-planes destacado">
-                    <div class="card-header">
-                        <h3>Plan Musculación</h3>
-                        <span class="precio">$35.000</span>
-                        <span class="periodo">/mes</span>
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><i class="fas fa-check"></i> Acceso a sala de pesas</li>
-                            <li><i class="fas fa-check"></i> Entrenador personal</li>
-                            <li><i class="fas fa-check"></i> Plan nutricional básico</li>
-                            <li><i class="fas fa-check"></i> Acceso a clases grupales</li>
-                        </ul>
-                    </div>
-                    <button class="plan-button">¡Comenzar Ahora!</button>
-                </div>
-
-                <div class="card-planes">
-                    <div class="card-header">
-                        <h3>Plan Pilates</h3>
-                        <span class="precio">$25.000</span>
-                        <span class="periodo">/mes</span>
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><i class="fas fa-check"></i> Clases grupales</li>
-                            <li><i class="fas fa-check"></i> Instructor certificado</li>
-                            <li><i class="fas fa-check"></i> Acceso a equipos</li>
-                            <li><i class="fas fa-check"></i> Material de apoyo</li>
-                        </ul>
-                    </div>
-                    <button class="plan-button">¡Comenzar Ahora!</button>
-                </div>
+            <div class="card-body">
+              <ul>
+                <li><i class="fas fa-check"></i> Clases ilimitadas</li>
+                <li><i class="fas fa-check"></i> Entrenador especializado</li>
+                <li><i class="fas fa-check"></i> Plan nutricional avanzado</li>
+                <li><i class="fas fa-check"></i> Acceso a zona WOD</li>
+              </ul>
             </div>
-        </section>
+            <button class="plan-button">¡Comenzar Ahora!</button>
+          </div>
 
-        <section id="clases">
-            <h2>Clases Disponibles</h2>
-            <div class="clases-container">
-                <!-- Aquí irán las tarjetas de clases -->
+          <div class="card-planes destacado">
+            <div class="card-header">
+              <h3>Plan Musculación</h3>
+              <span class="precio">$35.000</span>
+              <span class="periodo">/mes</span>
             </div>
-        </section>
-
-        <section id="entrenadores">
-            <h2>Nuestros Entrenadores</h2>
-            <div class="entrenadores-container">
-                <!-- Aquí irán las tarjetas de entrenadores -->
+            <div class="card-body">
+              <ul>
+                <li><i class="fas fa-check"></i> Acceso a sala de pesas</li>
+                <li><i class="fas fa-check"></i> Entrenador personal</li>
+                <li><i class="fas fa-check"></i> Plan nutricional básico</li>
+                <li><i class="fas fa-check"></i> Acceso a clases grupales</li>
+              </ul>
             </div>
-        </section>
+            <button class="plan-button">¡Comenzar Ahora!</button>
+          </div>
 
-        <section id="contacto">
-            <h2>Contáctanos</h2>
-            <form class="contacto-form">
-                <!-- Aquí irá el formulario de contacto -->
-            </form>
-        </section>
+          <div class="card-planes">
+            <div class="card-header">
+              <h3>Plan Pilates</h3>
+              <span class="precio">$25.000</span>
+              <span class="periodo">/mes</span>
+            </div>
+            <div class="card-body">
+              <ul>
+                <li><i class="fas fa-check"></i> Clases grupales</li>
+                <li><i class="fas fa-check"></i> Instructor certificado</li>
+                <li><i class="fas fa-check"></i> Acceso a equipos</li>
+                <li><i class="fas fa-check"></i> Material de apoyo</li>
+              </ul>
+            </div>
+            <button class="plan-button">¡Comenzar Ahora!</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="clases">
+        <h2>Clases Disponibles</h2>
+        <div class="clases-container">
+          <!-- Aquí irán las tarjetas de clases -->
+        </div>
+      </section>
+
+      <section id="entrenadores">
+        <h2>Nuestros Entrenadores</h2>
+        <div class="entrenadores-container">
+          <!-- Aquí irán las tarjetas de entrenadores -->
+        </div>
+      </section>
+
+      <section id="contacto">
+        <h2>Contáctanos</h2>
+        <form class="contacto-form">
+          <!-- Aquí irá el formulario de contacto -->
+        </form>
+      </section>
+
+      <!-- Sección de Testimonios -->
+      <section id="testimonios">
+        <h2>Testimonios de Clientes</h2>
+        <div class="testimonios-container">
+          <div class="testimonio-card">
+            <img
+              class="avatar"
+              src="https://randomuser.me/api/portraits/men/32.jpg"
+              alt="Cliente 1"
+            />
+            <div class="estrellas">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="texto-testimonio">
+              "¡Excelente gimnasio! Los entrenadores son muy profesionales y el
+              ambiente es motivador. Recomiendo PowerFit a todos."
+            </p>
+            <span class="nombre-cliente">Juan Pérez</span>
+          </div>
+          <div class="testimonio-card">
+            <img
+              class="avatar"
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="Cliente 2"
+            />
+            <div class="estrellas">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="texto-testimonio">
+              "Me encanta la variedad de clases y la atención personalizada. ¡He
+              visto grandes resultados!"
+            </p>
+            <span class="nombre-cliente">María Gómez</span>
+          </div>
+          <div class="testimonio-card">
+            <img
+              class="avatar"
+              src="https://randomuser.me/api/portraits/men/65.jpg"
+              alt="Cliente 3"
+            />
+            <div class="estrellas">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="texto-testimonio">
+              "Las instalaciones son de primera y siempre limpias. ¡Muy
+              recomendable!"
+            </p>
+            <span class="nombre-cliente">Carlos Díaz</span>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-info">
-                <h3>PowerFit Gym</h3>
-                <p>Tu mejor versión comienza aquí</p>
-            </div>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>PowerFit Gym</h3>
+          <p>Tu mejor versión comienza aquí</p>
         </div>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
