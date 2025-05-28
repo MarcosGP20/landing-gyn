@@ -88,21 +88,100 @@ nav {
   margin-bottom: 2rem;
 }
 
-.cta-button {
-  background-color: var(--color-amarillo);
+.cta-button,
+.plan-button {
+  background: linear-gradient(
+    90deg,
+    var(--color-amarillo) 60%,
+    var(--color-amarillo-claro) 100%
+  );
   color: var(--color-negro);
-  padding: 1rem 2rem;
+  padding: 1rem 2.2rem;
   border: none;
-  border-radius: 5px;
-  font-size: 1.2rem;
+  border-radius: 8px;
+  font-size: 1.25rem;
   font-weight: bold;
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 18px rgba(255, 215, 0, 0.18);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.cta-button:hover {
-  background-color: var(--color-amarillo-claro);
-  transform: scale(1.05);
+.cta-button::after,
+.plan-button::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 0, 0.18);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.cta-button:hover,
+.plan-button:hover {
+  background: linear-gradient(
+    90deg,
+    var(--color-amarillo-claro) 60%,
+    var(--color-amarillo) 100%
+  );
+  transform: scale(1.07) translateY(-2px);
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.22);
+}
+
+.cta-button:hover::after,
+.plan-button:hover::after {
+  width: 250%;
+  height: 250%;
+}
+
+/* Botón CTA flotante (WhatsApp ejemplo) */
+.cta-float {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: linear-gradient(90deg, #25d366 60%, #128c7e 100%);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  box-shadow: 0 8px 32px rgba(37, 211, 102, 0.22);
+  cursor: pointer;
+  z-index: 2000;
+  transition: transform 0.2s, box-shadow 0.2s;
+  outline: none;
+  text-decoration: none;
+}
+.cta-float:active,
+.cta-float:focus {
+  outline: none;
+  box-shadow: 0 8px 32px rgba(37, 211, 102, 0.22);
+  text-decoration: none;
+}
+.cta-float i {
+  font-size: 2.2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cta-float:hover {
+  transform: scale(1.12) translateY(-4px);
+  box-shadow: 0 16px 40px rgba(37, 211, 102, 0.28);
 }
 
 /* Secciones Generales */
