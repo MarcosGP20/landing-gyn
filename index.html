@@ -9,6 +9,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <!-- Leaflet CSS y JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   </head>
   <body>
     <header>
@@ -293,6 +296,23 @@
           </div>
         </div>
       </section>
+
+      <!-- Sección Ubicación con mapa Leaflet -->
+      <section id="ubicacion">
+        <h2>¿Dónde estamos?</h2>
+        <div
+          id="mapa-gym"
+          style="
+            width: 80vw;
+            max-width: 800px;
+            height: 350px;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+          "
+        ></div>
+      </section>
     </main>
 
     <footer>
@@ -349,6 +369,18 @@
           this.classList.toggle("active", !isOpen);
         });
       });
+
+      // Mapa Leaflet
+      if (document.getElementById("mapa-gym")) {
+        var map = L.map("mapa-gym").setView([-31.4167, -64.1833], 15);
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          attribution: "&copy; OpenStreetMap contributors",
+        }).addTo(map);
+        L.marker([-31.4167, -64.1833])
+          .addTo(map)
+          .bindPopup("PowerFit Gym - Centro de Córdoba")
+          .openPopup();
+      }
     </script>
   </body>
 </html>
