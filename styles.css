@@ -493,3 +493,71 @@ footer {
     height: 140px;
   }
 }
+
+/* FAQ Acordeón */
+#faq {
+  background: #181818;
+  padding: 5rem 0 4rem 0;
+}
+#faq h2 {
+  color: var(--color-amarillo);
+  text-align: center;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+}
+.faq-acordeon {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.faq-item {
+  background: #232323;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(255, 215, 0, 0.05);
+  overflow: hidden;
+}
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--color-amarillo);
+  font-size: 1.15rem;
+  font-weight: bold;
+  text-align: left;
+  padding: 1.2rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.2s;
+}
+.faq-question.active,
+.faq-question:hover {
+  background: #222;
+}
+.faq-icon {
+  margin-left: 1rem;
+  color: var(--color-amarillo-claro);
+  font-size: 1.1rem;
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background: #222;
+  color: var(--color-blanco);
+  font-size: 1.05rem;
+  padding: 0 1.5rem;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding 0.2s;
+}
+.faq-answer.open {
+  max-height: 200px;
+  padding: 1rem 1.5rem 1.2rem 1.5rem;
+}
+
+@media (max-width: 700px) {
+  .faq-acordeon {
+    max-width: 98vw;
+  }
+}

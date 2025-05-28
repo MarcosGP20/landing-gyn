@@ -241,6 +241,58 @@
           </div>
         </div>
       </section>
+
+      <!-- Sección Preguntas Frecuentes (FAQ) -->
+      <section id="faq">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="faq-acordeon">
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Cuáles son los horarios del gimnasio?<span class="faq-icon"
+                ><i class="fas fa-chevron-down"></i
+              ></span>
+            </button>
+            <div class="faq-answer">
+              Nuestro gimnasio está abierto de lunes a viernes de 7:00 a 22:00 y
+              sábados de 8:00 a 14:00
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Necesito experiencia previa para inscribirme?<span
+                class="faq-icon"
+                ><i class="fas fa-chevron-down"></i
+              ></span>
+            </button>
+            <div class="faq-answer">
+              No, contamos con clases y entrenadores para todos los niveles,
+              desde principiantes hasta avanzados.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Ofrecen planes nutricionales?<span class="faq-icon"
+                ><i class="fas fa-chevron-down"></i
+              ></span>
+            </button>
+            <div class="faq-answer">
+              Sí, nuestros planes incluyen asesoramiento nutricional
+              personalizado según tus objetivos.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Puedo acceder a una clase de prueba?<span class="faq-icon"
+                ><i class="fas fa-chevron-down"></i
+              ></span>
+            </button>
+            <div class="faq-answer">
+              ¡Por supuesto! Puedes agendar una clase de prueba sin costo para
+              conocer nuestras instalaciones y entrenadores.
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -271,6 +323,20 @@
               exito.style.display = "none";
             }, 5000);
           }
+        });
+      });
+
+      // FAQ acordeón
+      const faqQuestions = document.querySelectorAll(".faq-question");
+      faqQuestions.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const answer = this.nextElementSibling;
+          const isOpen = answer.classList.contains("open");
+          document.querySelectorAll(".faq-answer.open").forEach((el) => {
+            if (el !== answer) el.classList.remove("open");
+          });
+          answer.classList.toggle("open", !isOpen);
+          this.classList.toggle("active", !isOpen);
         });
       });
     </script>
