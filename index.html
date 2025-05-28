@@ -89,24 +89,92 @@
         </div>
       </section>
 
+      <!-- Sección Áreas de Entreno -->
+      <section id="areas-entreno">
+        <h2>Áreas de Entreno</h2>
+        <div class="areas-galeria">
+          <div class="area-item">
+            <img
+              src="https://images.unsplash.com/photo-1623874514711-0f321325f318?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Sala de Pesas"
+            />
+            <span>Sala de Pesas</span>
+          </div>
+          <div class="area-item">
+            <img
+              src="https://images.unsplash.com/photo-1662386392805-573808794a21?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Zona de Cardio"
+            />
+            <span>Zona de Cardio</span>
+          </div>
+          <div class="area-item">
+            <img
+              src="https://images.unsplash.com/photo-1556817781-77671f3fe3c7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Box de CrossFit"
+            />
+            <span>Box de CrossFit</span>
+          </div>
+          <div class="area-item">
+            <img
+              src="https://images.unsplash.com/photo-1518459031867-a89b944bffe4?auto=format&fit=crop&w=800&q=80"
+              alt="Clases Grupales"
+            />
+            <span>Clases Grupales</span>
+          </div>
+          <div class="area-item">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1726328924162-b91ceb58a5b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Zona Funcional"
+            />
+            <span>Zona Funcional</span>
+          </div>
+          <div class="area-item">
+            <img
+              src="https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-0dfc-622f-a961-0009dc6481c7/raw?se=2025-05-28T01%3A52%3A43Z&sp=r&sv=2024-08-04&sr=b&scid=634f7dcd-3301-531a-9053-496692f3931b&skoid=e9d2f8b1-028a-4cff-8eb1-d0e66fbefcca&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-27T12%3A17%3A13Z&ske=2025-05-28T12%3A17%3A13Z&sks=b&skv=2024-08-04&sig=cr%2BRxWkp7L52k/oYCqVbZ8b4c5AMAwgJKiKkYvp22Bc%3D"
+              alt="Vestuario"
+            />
+            <span>Vestuario</span>
+          </div>
+        </div>
+      </section>
+
       <section id="clases">
         <h2>Clases Disponibles</h2>
-        <div class="clases-container">
-          <!-- Aquí irán las tarjetas de clases -->
-        </div>
+        <div class="clases-container"></div>
       </section>
 
       <section id="entrenadores">
         <h2>Nuestros Entrenadores</h2>
-        <div class="entrenadores-container">
-          <!-- Aquí irán las tarjetas de entrenadores -->
-        </div>
+        <div class="entrenadores-container"></div>
       </section>
 
       <section id="contacto">
         <h2>Contáctanos</h2>
-        <form class="contacto-form">
-          <!-- Aquí irá el formulario de contacto -->
+        <form class="contacto-form" id="contactoForm" autocomplete="off">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="cta-button">Enviar mensaje</button>
+          <div
+            id="form-exito"
+            style="
+              display: none;
+              margin-top: 1rem;
+              color: var(--color-amarillo);
+              font-weight: bold;
+            "
+          >
+            ¡Gracias por contactarnos! Te responderemos pronto.
+          </div>
         </form>
       </section>
 
@@ -188,5 +256,23 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("contactoForm");
+        const exito = document.getElementById("form-exito");
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          // Validación simple
+          if (form.nombre.value && form.email.value && form.mensaje.value) {
+            exito.style.display = "block";
+            form.reset();
+            setTimeout(() => {
+              exito.style.display = "none";
+            }, 5000);
+          }
+        });
+      });
+    </script>
   </body>
 </html>

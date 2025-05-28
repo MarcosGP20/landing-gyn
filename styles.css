@@ -218,7 +218,11 @@ section h2 {
 
 /* Testimonios - estilo renovado */
 #testimonios {
-  background: linear-gradient(135deg, var(--color-amarillo-claro) 60%, #fffbe6 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-amarillo-claro) 60%,
+    #fffbe6 100%
+  );
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -240,7 +244,7 @@ section h2 {
   border-radius: 25px 5px 25px 5px;
   padding: 2.5rem 2rem;
   width: 340px;
-  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.18), 0 2px 8px rgba(0,0,0,0.07);
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.07);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -251,7 +255,7 @@ section h2 {
 
 .testimonio-card:hover {
   transform: translateY(-10px) scale(1.04) rotate(-1deg);
-  box-shadow: 0 16px 40px rgba(255, 215, 0, 0.22), 0 4px 16px rgba(0,0,0,0.10);
+  box-shadow: 0 16px 40px rgba(255, 215, 0, 0.22), 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .avatar {
@@ -261,7 +265,7 @@ section h2 {
   object-fit: cover;
   margin-bottom: 1.2rem;
   border: 3px solid var(--color-amarillo);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .estrellas {
@@ -361,5 +365,131 @@ footer {
 
   .card-planes.destacado:hover {
     transform: translateY(-10px);
+  }
+}
+
+/* Formulario de contacto */
+.contacto-form {
+  max-width: 400px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(255, 215, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.contacto-form label {
+  color: var(--color-amarillo);
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background: #181818;
+  color: var(--color-blanco);
+  outline: none;
+  transition: border 0.2s;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+  border: 1.5px solid var(--color-amarillo);
+}
+
+.contacto-form button[type="submit"] {
+  margin-top: 0.5rem;
+}
+
+#form-exito {
+  text-align: center;
+  font-size: 1.08rem;
+}
+
+/* Estilos para la sección de áreas de entreno */
+#areas-entreno {
+  padding: 5rem 0 4rem 0;
+  background: linear-gradient(120deg, #181818 60%, #232323 100%);
+}
+
+#areas-entreno h2 {
+  color: var(--color-amarillo);
+  text-align: center;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+}
+
+.areas-galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+  width: 80vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.area-item {
+  background: #222;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(255, 215, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.area-item:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.18);
+}
+
+.area-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.area-item span {
+  color: var(--color-amarillo-claro);
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 1rem 0;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 900px) {
+  .areas-galeria {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    width: 98vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .areas-galeria {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    width: 100vw;
+  }
+  .area-item img {
+    height: 140px;
   }
 }
